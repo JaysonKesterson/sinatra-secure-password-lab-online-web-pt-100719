@@ -17,7 +17,11 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/signup" do
-    #your code here
+    if params[:username]
+      erb :login
+    else
+      redirect to '/failure'
+    end
 
   end
 
