@@ -20,6 +20,7 @@ class ApplicationController < Sinatra::Base
     @user = User.new(username: params[:username], password: params[:password])
     if @user.username == nil
        redirect to '/failure'
+    end
     else
      
     end
